@@ -19,7 +19,7 @@ export default async function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	const locale = await getLocale();
+	const locale: any = await getLocale();
 	const messages = await getMessages(locale);
 	return (
 		<html lang={locale}>
