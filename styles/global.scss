@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// add global styles here
+body {
+	@apply bg-primary text-textPrimary;
+	scroll-behavior: smooth;
+}
+
+.word-break-word {
+	word-break: break-word;
+}
