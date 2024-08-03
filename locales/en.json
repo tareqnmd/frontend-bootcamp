@@ -1,5 +1,9 @@
 {
+	"Navbar": {},
+	"Footer": {
+		"copyright": "© 2024 Js Bootcamp by Tareq. All rights reserved."
+	},
 	"HomePage": {
-		"title": "Javascript Bootcamp En"
+		"title": "Javascript Bootcamp"
 	}
 }

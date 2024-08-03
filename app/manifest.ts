@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
 	return {
-		name: 'Shop',
-		short_name: 'Shop',
+		name: 'Javascript Bootcamp',
+		short_name: 'Javascript',
 		description: 'Developed by Tareqnmd',
 		start_url: '/',
 		display: 'standalone',

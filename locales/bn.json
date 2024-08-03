@@ -1,5 +1,9 @@
 {
+	"Navbar": {},
+	"Footer": {
+		"copyright": "© ২০২৪ জেএস বুটক্যাম্প by তারেক. সমস্ত অধিকার সংরক্ষিত।"
+	},
 	"HomePage": {
-		"title": "Javascript Bootcamp Bn"
+		"title": "জাভাস্ক্রিপ্ট বুটক্যাম্প"
 	}
 }

@@ -4,7 +4,7 @@ const Dashboard = () => {
 	const t = useTranslations('HomePage');
 
 	return (
-		<section className="container">
+		<section className="container py-2">
 			<h1>{t('title')}</h1>
 		</section>
 	);

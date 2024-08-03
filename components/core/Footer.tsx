@@ -1,6 +1,8 @@
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
 const Footer = () => {
+	const t = useTranslations('Footer');
 	return (
 		<footer className="bg-secondary">
 			<div className="container flex items-center justify-between flex-col sm:flex-row py-[20px] gap-2">
@@ -10,7 +12,7 @@ const Footer = () => {
 				>
 					Home
 				</Link>
-				<p>© 2024 Js Bootcamp by Tareq. All rights reserved.</p>
+				<p>{t('copyright')}</p>
 			</div>
 		</footer>
 	);

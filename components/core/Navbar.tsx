@@ -8,7 +8,7 @@ const Navbar = () => {
 					className="text-xl font-bold"
 					href="/"
 				>
-					Home
+					JS.
 				</Link>
 				<LocaleSwitcher />
 			</div>
