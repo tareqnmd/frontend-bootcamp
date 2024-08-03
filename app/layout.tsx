@@ -1,7 +1,8 @@
+import AppLayout from '@/components/core/AppLayout';
 import { cn } from '@/lib/utils';
+import '@/styles/global.scss';
 import type { Metadata } from 'next';
-import { NextIntlClientProvider } from 'next-intl';
-import { getLocale, getMessages } from 'next-intl/server';
+import { getLocale } from 'next-intl/server';
 import { Poppins } from 'next/font/google';
 
 const font = Poppins({
@@ -20,16 +21,10 @@ export default async function RootLayout({
 	children: React.ReactNode;
 }>) {
 	const locale: any = await getLocale();
-	const messages = await getMessages(locale);
 	return (
 		<html lang={locale}>
 			<body className={cn('antialiased', font.className)}>
-				<NextIntlClientProvider
-					locale={locale}
-					messages={messages}
-				>
-					{children}
-				</NextIntlClientProvider>
+				<AppLayout locale={locale}>{children}</AppLayout>
 			</body>
 		</html>
 	);

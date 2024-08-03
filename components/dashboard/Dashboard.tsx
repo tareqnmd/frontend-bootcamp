@@ -1,15 +1,13 @@
 import { useTranslations } from 'next-intl';
-import LocaleSwitcher from './LocaleSwitcher';
 
-const Home = () => {
+const Dashboard = () => {
 	const t = useTranslations('HomePage');
 
 	return (
-		<>
+		<section className="container">
 			<h1>{t('title')}</h1>
-			<LocaleSwitcher />
-		</>
+		</section>
 	);
 };
 
-export default Home;
+export default Dashboard;

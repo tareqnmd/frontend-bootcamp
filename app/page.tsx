@@ -1,5 +1,6 @@
-import Home from '@/components/Home';
+import Dashboard from "@/components/dashboard/Dashboard";
+
 
 export default function HomePage() {
-	return <Home />;
+	return <Dashboard />;
 }
