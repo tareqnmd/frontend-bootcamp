@@ -1,5 +1,5 @@
 const InteractiveShape = () => {
-	return <></>;
+	return <div></div>;
 };
 
 export default InteractiveShape;
