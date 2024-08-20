@@ -13,18 +13,25 @@ const question =
 const InteractiveShape = () => {
 	const [checkedBox, setCheckedBox] = useState<string[]>([]);
 	const totalBoxData = boxData.flat().filter((item) => item === 1).length;
+	const [processing, setProcessing] = useState(false);
 
 	const clearBox = () => {
-		Array.from(Array(totalBoxData).keys()).forEach((i) => {
-			setTimeout(() => {
-				console.log('checkedBox', checkedBox);
-				setCheckedBox((prev) => prev.slice(-1, 1));
-			}, 500 * (i + 1));
-		});
+		try {
+			setProcessing(true);
+			Array.from(Array(totalBoxData).keys()).forEach((i) => {
+				const timeout = setTimeout(() => {
+					setCheckedBox((prev) => prev.slice(1, prev.length));
+					clearTimeout(timeout);
+				}, 500 * (i + 1));
+			});
+		} catch (error) {
+		} finally {
+			setProcessing(false);
+		}
 	};
 
 	const boxHandler = (i: number, j: number, col: number) => {
-		if (col === 0 || checkedBox.includes(`${i}-${j}`)) return;
+		if (processing || col === 0 || checkedBox.includes(`${i}-${j}`)) return;
 		const updatedCheckedBox = [...checkedBox, `${i}-${j}`];
 		setCheckedBox(updatedCheckedBox);
 		if (updatedCheckedBox.length === totalBoxData) {
