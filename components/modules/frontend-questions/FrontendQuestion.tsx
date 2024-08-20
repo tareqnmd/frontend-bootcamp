@@ -7,6 +7,7 @@ const FrontendQuestion = ({ question }: { question: string }) => {
 				<Link
 					className="text-blue-700 underline"
 					href={question}
+					target="_blank"
 				>
 					Question
 				</Link>

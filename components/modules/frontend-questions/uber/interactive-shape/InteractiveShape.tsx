@@ -1,3 +1,6 @@
+'use client';
+import { cn } from '@/lib/utils';
+import { useState } from 'react';
 import FrontendQuestion from '../../FrontendQuestion';
 
 const boxData = [
@@ -8,6 +11,13 @@ const boxData = [
 const question =
 	'https://devtools.tech/questions/s/how-to-create-an-interactive-shape-based-ui-uber-frontend-interview-question-or-javascript-or-react-js---qid---6FVH1ZMWMXd4uZ8WAGEi';
 const InteractiveShape = () => {
+	const [checkedBox, setCheckedBox] = useState<string[]>([]);
+	const totalBoxData = boxData.flat().filter((item) => item === 1).length;
+	const boxHandler = (i: number, j: number, col: number) => {
+		if (col === 0 || checkedBox.includes(`${i}-${j}`)) return;
+		setCheckedBox((prev: string[]) => [...prev, `${i}-${j}`]);
+	};
+
 	return (
 		<div className="flex flex-col gap-6">
 			<FrontendQuestion question={question} />
@@ -20,7 +30,13 @@ const InteractiveShape = () => {
 						{row.map((col, j) => (
 							<div
 								key={j}
-								className={`w-full ${col ? 'border-2' : ''}`}
+								onClick={() => boxHandler(i, j, col)}
+								className={cn(
+									'w-full',
+									col && 'border-2',
+									col && !checkedBox.includes(`${i}-${j}`) && 'cursor-pointer',
+									checkedBox.includes(`${i}-${j}`) && 'bg-black'
+								)}
 							/>
 						))}
 					</div>
