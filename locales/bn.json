@@ -1,4 +1,7 @@
 {
+	"Basic": {
+		"question": "প্রশ্ন"
+	},
 	"Navbar": {
 		"menus": {
 			"javascript": "জাভাস্ক্রিপ্ট",

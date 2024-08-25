@@ -1,4 +1,7 @@
 {
+	"Basic": {
+		"question": "Question"
+	},
 	"Navbar": {
 		"menus": {
 			"javascript": "Javascript",

@@ -1,6 +1,8 @@
+import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 
-const FrontendQuestion = ({ question }: { question: string }) => {
+const FrontendQuestion = async ({ question }: { question: string }) => {
+	const t = await getTranslations('Basic');
 	return (
 		<li>
 			<Link
@@ -8,7 +10,7 @@ const FrontendQuestion = ({ question }: { question: string }) => {
 				href={question}
 				target="_blank"
 			>
-				Question
+				{t('question')}
 			</Link>
 		</li>
 	);
