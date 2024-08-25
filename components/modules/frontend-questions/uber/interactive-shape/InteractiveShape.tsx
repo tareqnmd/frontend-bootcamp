@@ -14,21 +14,39 @@ const InteractiveShape = () => {
 	const [checkedBox, setCheckedBox] = useState<string[]>([]);
 	const totalBoxData = boxData.flat().filter((item) => item === 1).length;
 	const [processing, setProcessing] = useState(false);
-	console.log('processing', processing);
 
-	const clearBox = () => {
+	// const clearBox = () => {
+	// 	try {
+	// 		setProcessing(true);
+	// 		for (let i = 0; i < totalBoxData; i++) {
+	// 			const timeout = setTimeout(() => {
+	// 				setCheckedBox((prev) => prev.slice(1, prev.length));
+	// 				clearTimeout(timeout);
+	// 			}, 500 * (i + 1));
+	// 		}
+	// 		setTimeout(() => {
+	// 			setProcessing(false);
+	// 		}, 500 * (totalBoxData + 1));
+	// 	} catch (error) {}
+	// };
+
+	const clearBox = async () => {
 		try {
 			setProcessing(true);
-			for (let i = 0; i < totalBoxData; i++) {
-				const timeout = setTimeout(() => {
-					setCheckedBox((prev) => prev.slice(1, prev.length));
-					clearTimeout(timeout);
-				}, 500 * (i + 1));
-			}
-			setTimeout(() => {
-				setProcessing(false);
-			}, 500 * (totalBoxData + 1));
-		} catch (error) {}
+			const promises = Array.from(Array(totalBoxData).keys()).map(
+				(i) =>
+					new Promise<void>((resolve) => {
+						setTimeout(() => {
+							setCheckedBox((prev) => prev.slice(1, prev.length));
+							resolve();
+						}, 500 * (i + 1));
+					})
+			);
+			await Promise.all(promises);
+			setProcessing(false);
+		} catch (error) {
+			console.error(error);
+		}
 	};
 
 	const boxHandler = (i: number, j: number, col: number) => {
