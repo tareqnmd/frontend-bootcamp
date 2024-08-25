@@ -6,8 +6,8 @@ export type MenuTypes = MenuType[];
 
 export const menus = [
 	{
-		key: 'frontend_questions',
-		href: '/frontend-questions',
+		key: 'interview_questions',
+		href: '/interview-questions',
 	},
 	{
 		key: 'javascript',
@@ -18,13 +18,13 @@ export const menus = [
 export const frontendQuestionOptions = [
 	{
 		key: 'uber',
-		href: '/frontend-questions/uber',
+		href: '/interview-questions/uber',
 	},
 ];
 
 export const frontendUberQuestionOptions = [
 	{
 		key: 'interactive_shape',
-		href: '/frontend-questions/uber/interactive-shape',
+		href: '/interview-questions/uber/interactive-shape',
 	},
 ];

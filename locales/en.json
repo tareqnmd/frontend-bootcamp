@@ -2,12 +2,13 @@
 	"Navbar": {
 		"menus": {
 			"javascript": "Javascript",
-			"frontend_questions": "Frontend Questions"
+			"interview_questions": "Interview Questions"
 		},
 		"frontendTopMenus": {
 			"uber": "Uber"
 		},
 		"frontendUberMenus": {
+			"title": "Interview Questions Uber",
 			"interactive_shape": "Interactive Shape"
 		}
 	},

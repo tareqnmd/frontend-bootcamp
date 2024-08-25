@@ -23,6 +23,10 @@ const config: Config = {
 				textPrimary: '#222222',
 				textSecondary: '#777777',
 			},
+			gridTemplateColumns: {
+				'auto-fill-min': 'repeat(auto-fill, minmax(60px, min-content))',
+				'auto-fit-min': 'repeat(auto-fit, minmax(60px, min-content))',
+			},
 		},
 	},
 	plugins: [],

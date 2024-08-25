@@ -1,4 +1,4 @@
-import FrontendQuestionsList from '@/components/modules/frontend-questions/FrontendQuestionsList';
+import FrontendQuestionsList from '@/components/modules/interview-questions/FrontendQuestionsList';
 import { frontendUberQuestionOptions } from '@/lib/menu';
 import { getTranslations } from 'next-intl/server';
 
@@ -9,6 +9,7 @@ const page = async () => {
 		<FrontendQuestionsList
 			menus={frontendUberQuestionOptions}
 			locale={localeMenus}
+			title={localeMenus.title}
 		/>
 	);
 };

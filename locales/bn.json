@@ -2,12 +2,13 @@
 	"Navbar": {
 		"menus": {
 			"javascript": "জাভাস্ক্রিপ্ট",
-			"frontend_questions": "ফ্রন্টএন্ড প্রশ্ন"
+			"interview_questions": "ইন্টারভিউ প্রশ্ন"
 		},
 		"frontendTopMenus": {
 			"uber": "উবার"
 		},
 		"frontendUberMenus": {
+			"title": "ইন্টারভিউ প্রশ্ন উবার",
 			"interactive_shape": "Interactive Shape"
 		}
 	},
