@@ -14,6 +14,7 @@ const InteractiveShape = () => {
 	const [checkedBox, setCheckedBox] = useState<string[]>([]);
 	const totalBoxData = boxData.flat().filter((item) => item === 1).length;
 	const [processing, setProcessing] = useState(false);
+	console.log('processing', processing);
 
 	const clearBox = () => {
 		try {
