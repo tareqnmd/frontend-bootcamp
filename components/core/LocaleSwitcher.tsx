@@ -7,7 +7,6 @@ import { startTransition } from 'react';
 export default function LocaleSwitcher() {
 	const locale = useLocale();
 	function onChange(e: any) {
-		console.log('e.target', e.target.checked);
 		startTransition(() => {
 			setUserLocale(e.target.checked ? 'bn' : 'en');
 		});
@@ -22,8 +21,8 @@ export default function LocaleSwitcher() {
 			/>
 			<div
 				className={cn(
-					"relative w-11 h-6 bg-gray-200 rounded-full px-1 text-xs peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-green-600",
-					locale === 'bn' ? 'text-white' : 'text-black text-right'
+					"relative w-11 h-6 bg-green-600 rounded-full px-1 text-[12px] leading-[12px] grid items-center text-white peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all",
+					locale === 'en' && 'text-right'
 				)}
 			>
 				{locale}

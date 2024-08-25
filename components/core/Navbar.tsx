@@ -11,7 +11,7 @@ const Navbar = () => {
 				>
 					JS.
 				</Link>
-				<div className="flex items-center gap-4">
+				<div className="flex items-center gap-2">
 					{menus.map((menu) => (
 						<Link
 							key={menu.href}
