@@ -1,7 +1,11 @@
 import { menus } from '@/lib/menu';
+import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import LocaleSwitcher from './LocaleSwitcher';
-const Navbar = () => {
+const Navbar = async () => {
+	const t = await getTranslations('Navbar');
+	const localeMenus = t.raw('menus');
+	console.log('localeMenus', localeMenus);
 	return (
 		<nav className="bg-secondary">
 			<div className="container py-[10px] xl:py-[20px] flex items-center justify-between gap-8 font-[400]">
@@ -16,8 +20,9 @@ const Navbar = () => {
 						<Link
 							key={menu.href}
 							href={menu.href}
+							className="hover:underline"
 						>
-							{menu.label}
+							{localeMenus[menu.key]}
 						</Link>
 					))}
 					<LocaleSwitcher />

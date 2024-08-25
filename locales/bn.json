@@ -1,5 +1,10 @@
 {
-	"Navbar": {},
+	"Navbar": {
+		"menus": {
+			"javascript": "জাভাস্ক্রিপ্ট",
+			"frontend_questions": "ফ্রন্টএন্ড প্রশ্ন"
+		}
+	},
 	"Footer": {
 		"copyright": "© ২০২৪ জেএস বুটক্যাম্প by তারেক. সমস্ত অধিকার সংরক্ষিত।"
 	},

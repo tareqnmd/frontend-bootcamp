@@ -1,5 +1,10 @@
 {
-	"Navbar": {},
+	"Navbar": {
+		"menus": {
+			"javascript": "Javascript",
+			"frontend_questions": "Frontend Questions"
+		}
+	},
 	"Footer": {
 		"copyright": "© 2024 Js Bootcamp by Tareq. All rights reserved."
 	},

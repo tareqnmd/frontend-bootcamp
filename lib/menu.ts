@@ -1,10 +1,10 @@
 export const menus = [
 	{
-		label: 'Frontend Questions',
+		key: 'frontend_questions',
 		href: '/frontend-questions',
 	},
 	{
-		label: 'JavaScript',
+		key: 'javascript',
 		href: '/javascript',
 	},
 ];
