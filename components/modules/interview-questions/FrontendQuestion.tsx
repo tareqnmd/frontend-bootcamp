@@ -6,7 +6,7 @@ const FrontendQuestion = async ({ question }: { question: string }) => {
 	return (
 		<li>
 			<Link
-				className="text-blue-700 underline"
+				className="text-blue-700 border-b border-blue-700"
 				href={question}
 				target="_blank"
 			>
