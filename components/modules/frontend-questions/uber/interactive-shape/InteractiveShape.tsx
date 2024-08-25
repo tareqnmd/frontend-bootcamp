@@ -19,16 +19,16 @@ const InteractiveShape = () => {
 	const clearBox = () => {
 		try {
 			setProcessing(true);
-			Array.from(Array(totalBoxData).keys()).forEach((i) => {
+			for (let i = 0; i < totalBoxData; i++) {
 				const timeout = setTimeout(() => {
 					setCheckedBox((prev) => prev.slice(1, prev.length));
 					clearTimeout(timeout);
 				}, 500 * (i + 1));
-			});
-		} catch (error) {
-		} finally {
-			setProcessing(false);
-		}
+			}
+			setTimeout(() => {
+				setProcessing(false);
+			}, 500 * (totalBoxData + 1));
+		} catch (error) {}
 	};
 
 	const boxHandler = (i: number, j: number, col: number) => {
