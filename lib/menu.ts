@@ -1,4 +1,4 @@
-export const dashboardMenu = [
+export const menus = [
 	{
 		label: 'Frontend Questions',
 		href: '/frontend-questions',

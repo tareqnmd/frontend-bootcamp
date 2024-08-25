@@ -1,21 +1,10 @@
-import { dashboardMenu } from '@/lib/menu';
-import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
 
-const Dashboard = () => {
-	const t = useTranslations('HomePage');
-
+const Dashboard = async () => {
+	const t = await getTranslations('HomePage');
 	return (
-		<section className="container py-2">
-			<h1>{t('title')}</h1>
-			{dashboardMenu.map((menu) => (
-				<Link
-					key={menu.href}
-					href={menu.href}
-				>
-					{menu.label}
-				</Link>
-			))}
+		<section className="container py-2 grid place-items-center">
+			<h1 className="text-3xl">{t('title')}</h1>
 		</section>
 	);
 };

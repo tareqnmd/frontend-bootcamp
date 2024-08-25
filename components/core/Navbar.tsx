@@ -1,3 +1,4 @@
+import { menus } from '@/lib/menu';
 import Link from 'next/link';
 import LocaleSwitcher from './LocaleSwitcher';
 const Navbar = () => {
@@ -10,7 +11,17 @@ const Navbar = () => {
 				>
 					JS.
 				</Link>
-				<LocaleSwitcher />
+				<div className="flex items-center gap-4">
+					{menus.map((menu) => (
+						<Link
+							key={menu.href}
+							href={menu.href}
+						>
+							{menu.label}
+						</Link>
+					))}
+					<LocaleSwitcher />
+				</div>
 			</div>
 		</nav>
 	);
