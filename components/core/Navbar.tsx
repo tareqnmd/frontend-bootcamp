@@ -5,7 +5,6 @@ import LocaleSwitcher from './LocaleSwitcher';
 const Navbar = async () => {
 	const t = await getTranslations('Navbar');
 	const localeMenus = t.raw('menus');
-	console.log('localeMenus', localeMenus);
 	return (
 		<nav className="bg-secondary">
 			<div className="container py-[10px] xl:py-[20px] flex items-center justify-between gap-8 font-[400]">
