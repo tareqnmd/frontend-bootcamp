@@ -3,6 +3,12 @@
 		"menus": {
 			"javascript": "Javascript",
 			"frontend_questions": "Frontend Questions"
+		},
+		"frontendTopMenus": {
+			"uber": "Uber"
+		},
+		"frontendUberMenus": {
+			"interactive_shape": "Interactive Shape"
 		}
 	},
 	"Footer": {

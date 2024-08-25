@@ -2,6 +2,7 @@ import { menus } from '@/lib/menu';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import LocaleSwitcher from './LocaleSwitcher';
+import NavLink from './NavLink';
 const Navbar = async () => {
 	const t = await getTranslations('Navbar');
 	const localeMenus = t.raw('menus');
@@ -16,13 +17,11 @@ const Navbar = async () => {
 				</Link>
 				<div className="flex items-center gap-2">
 					{menus.map((menu) => (
-						<Link
+						<NavLink
 							key={menu.href}
 							href={menu.href}
-							className="hover:underline"
-						>
-							{localeMenus[menu.key]}
-						</Link>
+							label={localeMenus[menu.key]}
+						/>
 					))}
 					<LocaleSwitcher />
 				</div>

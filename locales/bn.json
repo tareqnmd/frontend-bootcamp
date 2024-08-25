@@ -3,6 +3,12 @@
 		"menus": {
 			"javascript": "জাভাস্ক্রিপ্ট",
 			"frontend_questions": "ফ্রন্টএন্ড প্রশ্ন"
+		},
+		"frontendTopMenus": {
+			"uber": "উবার"
+		},
+		"frontendUberMenus": {
+			"interactive_shape": "Interactive Shape"
 		}
 	},
 	"Footer": {

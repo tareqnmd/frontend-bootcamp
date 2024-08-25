@@ -1,11 +1,7 @@
-import Link from 'next/link';
+import FrontendQuestions from '@/components/modules/frontend-questions/FrontendQuestions';
 
 const page = () => {
-	return (
-		<>
-			<Link href="/frontend-questions/uber">Uber</Link>
-		</>
-	);
+	return <FrontendQuestions />;
 };
 
 export default page;

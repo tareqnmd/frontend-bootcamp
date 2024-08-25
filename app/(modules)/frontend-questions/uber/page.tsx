@@ -1,12 +1,15 @@
-import Link from 'next/link';
+import FrontendQuestionsList from '@/components/modules/frontend-questions/FrontendQuestionsList';
+import { frontendUberQuestionOptions } from '@/lib/menu';
+import { getTranslations } from 'next-intl/server';
 
-const page = () => {
+const page = async () => {
+	const t = await getTranslations('Navbar');
+	const localeMenus = t.raw('frontendUberMenus');
 	return (
-		<>
-			<Link href="/frontend-questions/uber/interactive-shape">
-				Interactive Shape
-			</Link>
-		</>
+		<FrontendQuestionsList
+			menus={frontendUberQuestionOptions}
+			locale={localeMenus}
+		/>
 	);
 };
 
