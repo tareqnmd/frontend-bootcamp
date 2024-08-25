@@ -70,7 +70,10 @@ const InteractiveShape = () => {
 							className={cn(
 								'w-full',
 								col && 'border-2',
-								col && !checkedBox.includes(`${i}-${j}`) && 'cursor-pointer',
+								col &&
+									!processing &&
+									!checkedBox.includes(`${i}-${j}`) &&
+									'cursor-pointer',
 								checkedBox.includes(`${i}-${j}`) && 'bg-[#0bcc59]'
 							)}
 						/>
