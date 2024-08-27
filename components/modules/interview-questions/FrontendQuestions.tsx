@@ -6,27 +6,22 @@ const FrontendQuestions = async () => {
 	const t = await getTranslations('Navbar');
 	const frontendTopMenus = t.raw('frontendTopMenus');
 	return (
-		<div className="grid gap-2">
-			<strong className="text-xl border-b border-black">
-				{frontendTopMenus.title}
-			</strong>
-			<ul className="grid grid-cols-auto-fit-min grid-flow-dense gap-2">
-				{frontendQuestionOptions.map((option) => (
-					<li
-						key={option.key}
-						className="rounded-full bg-green-400 flex"
+		<ul className=" h-full grid grid-cols-auto-fit-min grid-flow-dense place-content-center gap-2">
+			{frontendQuestionOptions.map((option) => (
+				<li
+					key={option.key}
+					className="rounded-full bg-green-400 flex"
+				>
+					<Link
+						key={option.href}
+						href={option.href}
+						className="w-full text-center text-[14px] text-white p-[6px_12px] txt-sm leading-[14px]"
 					>
-						<Link
-							key={option.href}
-							href={option.href}
-							className="w-full text-center text-[14px] text-white p-[6px_12px] txt-sm leading-[14px]"
-						>
-							{frontendTopMenus[option.key]}
-						</Link>
-					</li>
-				))}
-			</ul>
-		</div>
+						{frontendTopMenus[option.key]}
+					</Link>
+				</li>
+			))}
+		</ul>
 	);
 };
 
