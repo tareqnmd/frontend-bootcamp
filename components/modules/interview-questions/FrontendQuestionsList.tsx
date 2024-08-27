@@ -1,13 +1,11 @@
-import { MenuTypes } from '@/lib/menu';
+import { InterviewQuestionType } from '@/types/interview-questions';
 import Link from 'next/link';
 
 const FrontendQuestionsList = ({
 	menus,
-	locale,
 	title,
 }: {
-	menus: MenuTypes;
-	locale: Record<string, string>;
+	menus: InterviewQuestionType[];
 	title: string;
 }) => {
 	return (
@@ -25,7 +23,7 @@ const FrontendQuestionsList = ({
 							href={menu.href}
 							className="text-sm text-blue-700 underline"
 						>
-							{locale[menu.key]}
+							{menu.title}
 						</Link>
 					</li>
 				))}

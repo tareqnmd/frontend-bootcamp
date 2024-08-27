@@ -25,10 +25,3 @@ export const frontendQuestionOptions = [
 		href: '/interview-questions/uber',
 	},
 ];
-
-export const frontendUberQuestionOptions = [
-	{
-		key: 'interactive_shape',
-		href: '/interview-questions/uber/interactive-shape',
-	},
-];

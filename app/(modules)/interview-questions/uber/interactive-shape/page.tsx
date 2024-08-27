@@ -1,14 +1,16 @@
 import FrontendQuestionWrapper from '@/components/modules/interview-questions/FrontendQuestionWrapper';
 import InteractiveShape from '@/components/modules/interview-questions/uber/interactive-shape/InteractiveShape';
-const question =
-	'https://devtools.tech/questions/s/how-to-create-an-interactive-shape-based-ui-uber-frontend-interview-question-or-javascript-or-react-js---qid---6FVH1ZMWMXd4uZ8WAGEi';
+import { questionsFromUber } from '@/lib/interview-questions/uber';
 
 const page = () => {
-	return (
+	const question = questionsFromUber.find(
+		(question) => question.key === 'interactive_shape'
+	);
+	return question ? (
 		<FrontendQuestionWrapper question={question}>
 			<InteractiveShape />
 		</FrontendQuestionWrapper>
-	);
+	) : null;
 };
 
 export default page;

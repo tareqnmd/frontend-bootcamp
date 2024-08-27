@@ -1,21 +1,19 @@
 {
 	"Basic": {
-		"question": "প্রশ্ন"
+		"question": "প্রশ্ন",
+		"external_question": "বাহ্যিক প্রশ্ন"
 	},
 	"Navbar": {
 		"menus": {
 			"javascript": "জাভাস্ক্রিপ্ট",
 			"interview_questions": "ইন্টারভিউ প্রশ্ন",
 			"problem_solving": "সমস্যা সমাধান"
-		},
-		"frontendTopMenus": {
-			"title": "ইন্টারভিউ প্রশ্ন",
-			"uber": "উবার"
-		},
-		"frontendUberMenus": {
-			"title": "ইন্টারভিউ প্রশ্ন উবার",
-			"interactive_shape": "Interactive Shape"
 		}
+	},
+	"InterviewQuestions": {
+		"title": "ইন্টারভিউ প্রশ্ন",
+		"uber": "উবার",
+		"uber_title": "ইন্টারভিউ প্রশ্ন উবার"
 	},
 	"Footer": {
 		"copyright": "© ২০২৪ জেএস বুটক্যাম্প by তারেক. সমস্ত অধিকার সংরক্ষিত।"
