@@ -1,5 +1,7 @@
+import logo from '@/assets/images/logo.png';
 import { menus } from '@/lib/menu';
 import { getTranslations } from 'next-intl/server';
+import Image from 'next/image';
 import Link from 'next/link';
 import LocaleSwitcher from './LocaleSwitcher';
 import NavLink from './NavLink';
@@ -13,9 +15,14 @@ const Navbar = async () => {
 					className="text-xl font-bold"
 					href="/"
 				>
-					JS.
+					<Image
+						src={logo}
+						alt="logo"
+						width={50}
+						height={50}
+					/>
 				</Link>
-				<div className="flex items-center gap-2">
+				<div className="flex items-center gap-4">
 					{menus.map((menu) => (
 						<NavLink
 							key={menu.href}

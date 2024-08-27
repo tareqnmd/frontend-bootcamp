@@ -21,7 +21,7 @@ export default function LocaleSwitcher() {
 			/>
 			<div
 				className={cn(
-					"relative w-11 h-6 bg-green-600 rounded-full px-1 text-[12px] leading-[12px] grid items-center text-white peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all",
+					"relative w-11 h-6 bg-white rounded-full px-1 text-[12px] leading-[12px] grid items-center text-black peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-gray-200 after:rounded-full after:h-5 after:w-5 after:transition-all",
 					locale === 'en' && 'text-right'
 				)}
 			>
