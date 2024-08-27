@@ -5,7 +5,8 @@
 	"Navbar": {
 		"menus": {
 			"javascript": "Javascript",
-			"interview_questions": "Interview Questions"
+			"interview_questions": "Interview Questions",
+			"problem_solving": "Problem Solving"
 		},
 		"frontendTopMenus": {
 			"title": "Interview Questions",

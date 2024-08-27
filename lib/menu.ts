@@ -6,12 +6,16 @@ export type MenuTypes = MenuType[];
 
 export const menus = [
 	{
+		key: 'javascript',
+		href: '/javascript',
+	},
+	{
 		key: 'interview_questions',
 		href: '/interview-questions',
 	},
 	{
-		key: 'javascript',
-		href: '/javascript',
+		key: 'problem_solving',
+		href: '/problem-solving',
 	},
 ];
 
