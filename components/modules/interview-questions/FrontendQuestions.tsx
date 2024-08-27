@@ -6,7 +6,7 @@ const FrontendQuestions = async () => {
 	const t = await getTranslations('Navbar');
 	const frontendTopMenus = t.raw('frontendTopMenus');
 	return (
-		<ul className=" h-full grid grid-cols-auto-fit-min grid-flow-dense place-content-center gap-2">
+		<ul className="h-full place-content-center flex flex-wrap items-center gap-2">
 			{frontendQuestionOptions.map((option) => (
 				<li
 					key={option.key}
