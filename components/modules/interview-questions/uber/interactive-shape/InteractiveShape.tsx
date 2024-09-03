@@ -69,7 +69,7 @@ const InteractiveShape = () => {
 							onClick={() => boxHandler(i, j, col)}
 							className={cn(
 								'w-full',
-								col && 'border-2',
+								col && 'border-2 border-black dark:border-white',
 								col &&
 									!processing &&
 									!checkedBox.includes(`${i}-${j}`) &&

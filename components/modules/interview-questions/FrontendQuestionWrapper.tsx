@@ -11,7 +11,7 @@ const FrontendQuestionWrapper = ({
 	return (
 		<div className="flex flex-col gap-4">
 			<FrontendQuestion question={question} />
-			<h2 className="text-xl font-bold w-max border-b-2 border-b-black">
+			<h2 className="text-xl font-bold w-max border-b-2 border-b-black dark:border-b-white">
 				Solution:
 			</h2>
 			{children}
