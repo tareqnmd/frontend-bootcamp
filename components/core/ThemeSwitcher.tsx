@@ -1,24 +1,16 @@
 'use client';
-import { setUserLocale } from '@/lib/helper/server-func';
 import { cn } from '@/lib/utils';
-import { useLocale } from 'next-intl';
-import { startTransition } from 'react';
-import { RiEnglishInput } from 'react-icons/ri';
+import { useTheme } from 'next-themes';
+import { IoMoonSharp, IoSunnySharp } from 'react-icons/io5';
 export default function ThemeSwitcher() {
-	const locale = useLocale();
-	const english = locale === 'en';
-	function onChange() {
-		startTransition(() => {
-			setUserLocale(english ? 'bn' : 'en');
-		});
-	}
+	const { setTheme, theme } = useTheme();
 	return (
 		<button
 			style={{ lineHeight: '14px' }}
 			className={cn('border p-1 rounded text-[14px] bg-[#C4DAD2]')}
-			onClick={onChange}
+			onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
 		>
-			{english ? <RiEnglishInput /> : 'অ'}
+			{theme === 'dark' ? <IoMoonSharp /> : <IoSunnySharp />}
 		</button>
 	);
 }

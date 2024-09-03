@@ -13,16 +13,23 @@ const AppLayout = async ({
 }) => {
 	const messages = await getMessages(locale);
 	return (
-		<NextIntlClientProvider
-			locale={locale}
-			messages={messages}
+		<ThemeProvider
+			attribute="class"
+			defaultTheme="system"
+			enableSystem
+			disableTransitionOnChange
 		>
-			<main className="main">
-				<Navbar />
-				<ThemeProvider>{children}</ThemeProvider>
-				<Footer />
-			</main>
-		</NextIntlClientProvider>
+			<NextIntlClientProvider
+				locale={locale}
+				messages={messages}
+			>
+				<main className="main">
+					<Navbar />
+					{children}
+					<Footer />
+				</main>
+			</NextIntlClientProvider>
+		</ThemeProvider>
 	);
 };
 
