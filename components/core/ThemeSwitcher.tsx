@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import { useLocale } from 'next-intl';
 import { startTransition } from 'react';
 import { RiEnglishInput } from 'react-icons/ri';
-export default function LocaleSwitcher() {
+export default function ThemeSwitcher() {
 	const locale = useLocale();
 	const english = locale === 'en';
 	function onChange() {

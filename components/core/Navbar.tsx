@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import LocaleSwitcher from './LocaleSwitcher';
 import NavLink from './NavLink';
+import ThemeSwitcher from './ThemeSwitcher';
 const Navbar = async () => {
 	const t = await getTranslations('Navbar');
 	const localeMenus = t.raw('menus');
@@ -30,6 +31,7 @@ const Navbar = async () => {
 							label={localeMenus[menu.key]}
 						/>
 					))}
+					<ThemeSwitcher />
 					<LocaleSwitcher />
 				</div>
 			</div>
