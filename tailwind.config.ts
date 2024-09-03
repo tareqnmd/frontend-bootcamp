@@ -16,6 +16,10 @@ const config: Config = {
 			},
 		},
 		extend: {
+			fontFamily: {
+				english: ['var(--font-english)'],
+				bengali: ['var(--font-bengali)'],
+			},
 			colors: {
 				primary: '#ffffff',
 				secondary: '#ececec',

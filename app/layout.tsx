@@ -3,10 +3,16 @@ import { cn } from '@/lib/utils';
 import '@/styles/global.scss';
 import type { Metadata } from 'next';
 import { getLocale } from 'next-intl/server';
-import { Lora } from 'next/font/google';
+import { Lora, Noto_Sans_Bengali } from 'next/font/google';
 
 const font = Lora({
 	subsets: ['latin'],
+	variable: '--font-english',
+});
+
+const bengaliFont = Noto_Sans_Bengali({
+	subsets: ['bengali'],
+	variable: '--font-bengali',
 });
 
 export const metadata: Metadata = {
@@ -22,7 +28,14 @@ export default async function RootLayout({
 	const locale: any = await getLocale();
 	return (
 		<html lang={locale}>
-			<body className={cn('antialiased', font.className)}>
+			<body
+				className={cn(
+					'antialiased',
+					bengaliFont.variable,
+					font.variable,
+					locale === 'en' ? 'font-english' : 'font-bengali'
+				)}
+			>
 				<AppLayout locale={locale}>{children}</AppLayout>
 			</body>
 		</html>
