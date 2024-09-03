@@ -3,11 +3,10 @@ import { cn } from '@/lib/utils';
 import '@/styles/global.scss';
 import type { Metadata } from 'next';
 import { getLocale } from 'next-intl/server';
-import { Poppins } from 'next/font/google';
+import { Lora } from 'next/font/google';
 
-const font = Poppins({
+const font = Lora({
 	subsets: ['latin'],
-	weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
 export const metadata: Metadata = {
