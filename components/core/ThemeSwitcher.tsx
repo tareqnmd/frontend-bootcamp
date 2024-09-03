@@ -7,7 +7,7 @@ export default function ThemeSwitcher() {
 	return (
 		<button
 			style={{ lineHeight: '14px' }}
-			className={cn('border p-1 rounded text-[14px] bg-[#C4DAD2]')}
+			className={cn('p-1 rounded text-[14px]')}
 			onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
 		>
 			{theme === 'dark' ? <IoMoonSharp /> : <IoSunnySharp />}

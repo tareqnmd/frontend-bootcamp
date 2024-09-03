@@ -3,7 +3,6 @@ import { setUserLocale } from '@/lib/helper/server-func';
 import { cn } from '@/lib/utils';
 import { useLocale } from 'next-intl';
 import { startTransition } from 'react';
-import { RiEnglishInput } from 'react-icons/ri';
 export default function LocaleSwitcher() {
 	const locale = useLocale();
 	const english = locale === 'en';
@@ -15,10 +14,10 @@ export default function LocaleSwitcher() {
 	return (
 		<button
 			style={{ lineHeight: '14px' }}
-			className={cn('border p-1 rounded text-[14px] bg-[#C4DAD2]')}
+			className={cn('p-1 rounded text-[14px]')}
 			onClick={onChange}
 		>
-			{english ? <RiEnglishInput /> : 'অ'}
+			{english ? 'En' : 'বাং'}
 		</button>
 	);
 }

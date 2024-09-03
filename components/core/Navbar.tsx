@@ -10,7 +10,7 @@ const Navbar = async () => {
 	const t = await getTranslations('Navbar');
 	const localeMenus = t.raw('menus');
 	return (
-		<nav className="bg-secondary">
+		<nav className="border-b">
 			<div className="container py-[10px] xl:py-[20px] flex items-center justify-between gap-8 font-[400]">
 				<Link
 					className="text-xl font-bold"
@@ -32,8 +32,8 @@ const Navbar = async () => {
 						/>
 					))}
 					<div className="flex items-center gap-2">
-						<ThemeSwitcher />
 						<LocaleSwitcher />
+						<ThemeSwitcher />
 					</div>
 				</div>
 			</div>
