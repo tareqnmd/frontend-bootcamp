@@ -1,8 +1,6 @@
-import logo from '@/assets/images/logo.png';
 import { menus } from '@/lib/menu';
 import { getTranslations } from 'next-intl/server';
-import Image from 'next/image';
-import Link from 'next/link';
+import AppLogo from './AppLogo';
 import LocaleSwitcher from './LocaleSwitcher';
 import NavLink from './NavLink';
 import ThemeSwitcher from './ThemeSwitcher';
@@ -12,17 +10,7 @@ const Navbar = async () => {
 	return (
 		<nav className="border-b">
 			<div className="container py-[10px] xl:py-[20px] flex items-center justify-between gap-8 font-[400]">
-				<Link
-					className="text-xl font-bold"
-					href="/"
-				>
-					<Image
-						src={logo}
-						alt="logo"
-						width={50}
-						height={50}
-					/>
-				</Link>
+				<AppLogo />
 				<div className="flex items-center gap-4">
 					{menus.map((menu) => (
 						<NavLink
