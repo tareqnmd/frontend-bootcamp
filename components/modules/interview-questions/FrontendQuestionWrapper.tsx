@@ -5,9 +5,11 @@ import FrontendQuestion from './FrontendQuestion';
 const FrontendQuestionWrapper = ({
 	question,
 	children,
+	codeString = '',
 }: {
 	question: InterviewQuestionType;
 	children: React.ReactNode;
+	codeString: string;
 }) => {
 	return (
 		<div className="flex flex-col gap-4">
@@ -17,7 +19,7 @@ const FrontendQuestionWrapper = ({
 			</h2>
 			{children}
 			<br />
-			<CodeBlock codeString="" />
+			<CodeBlock codeString={codeString} />
 		</div>
 	);
 };
