@@ -1,13 +1,16 @@
+import CodeBlock from '@/components/modules/common/CodeBlock';
 import FrontendQuestionWrapper from '@/components/modules/interview-questions/FrontendQuestionWrapper';
 import InteractiveShape from '@/components/modules/interview-questions/uber/interactive-shape/InteractiveShape';
 import { questionsFromUber } from '@/lib/interview-questions/uber';
-
 const page = () => {
 	const question = questionsFromUber.find(
 		(question) => question.key === 'interactive_shape'
 	);
 	return question ? (
-		<FrontendQuestionWrapper question={question}>
+		<FrontendQuestionWrapper
+			question={question}
+			codeString=""
+		>
 			<InteractiveShape />
 		</FrontendQuestionWrapper>
 	) : null;

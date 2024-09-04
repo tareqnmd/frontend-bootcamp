@@ -13,20 +13,7 @@ const InteractiveShape = () => {
 	const totalBoxData = boxData.flat().filter((item) => item === 1).length;
 	const [processing, setProcessing] = useState(false);
 
-	// const clearBox = () => {
-	// 	try {
-	// 		setProcessing(true);
-	// 		for (let i = 0; i < totalBoxData; i++) {
-	// 			const timeout = setTimeout(() => {
-	// 				setCheckedBox((prev) => prev.slice(1, prev.length));
-	// 				clearTimeout(timeout);
-	// 			}, 500 * (i + 1));
-	// 		}
-	// 		setTimeout(() => {
-	// 			setProcessing(false);
-	// 		}, 500 * (totalBoxData + 1));
-	// 	} catch (error) {}
-	// };
+
 
 	const clearBox = async () => {
 		try {

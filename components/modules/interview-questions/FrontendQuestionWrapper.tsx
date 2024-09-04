@@ -1,4 +1,5 @@
 import { InterviewQuestionType } from '@/types/interview-questions';
+import CodeBlock from '../common/CodeBlock';
 import FrontendQuestion from './FrontendQuestion';
 
 const FrontendQuestionWrapper = ({
@@ -15,6 +16,8 @@ const FrontendQuestionWrapper = ({
 				Solution:
 			</h2>
 			{children}
+			<br />
+			<CodeBlock codeString="" />
 		</div>
 	);
 };
