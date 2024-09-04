@@ -6,10 +6,7 @@ const page = () => {
 		(question) => question.key === 'interactive_shape'
 	);
 	return question ? (
-		<FrontendQuestionWrapper
-			question={question}
-			codeString=""
-		>
+		<FrontendQuestionWrapper question={question}>
 			<InteractiveShape />
 		</FrontendQuestionWrapper>
 	) : null;

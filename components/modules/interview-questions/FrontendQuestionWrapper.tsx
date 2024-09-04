@@ -1,15 +1,12 @@
 import { InterviewQuestionType } from '@/types/interview-questions';
-import CodeBlock from '../common/CodeBlock';
 import FrontendQuestion from './FrontendQuestion';
 
 const FrontendQuestionWrapper = ({
 	question,
 	children,
-	codeString = '',
 }: {
 	question: InterviewQuestionType;
 	children: React.ReactNode;
-	codeString: string;
 }) => {
 	return (
 		<div className="flex flex-col gap-4">
@@ -18,8 +15,6 @@ const FrontendQuestionWrapper = ({
 				Solution:
 			</h2>
 			{children}
-			<br />
-			<CodeBlock codeString={codeString} />
 		</div>
 	);
 };
