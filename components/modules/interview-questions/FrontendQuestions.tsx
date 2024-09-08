@@ -9,12 +9,12 @@ const FrontendQuestions = async () => {
 			{frontendQuestionOptions.map((option) => (
 				<li
 					key={option.key}
-					className="rounded-full bg-green-400 flex"
+					className="border text-black dark:text-white border-black dark:border-white flex"
 				>
 					<Link
 						key={option.href}
 						href={option.href}
-						className="w-full text-center text-[14px] text-white p-[6px_12px] txt-sm leading-[14px]"
+						className="w-full text-center text-[14px] p-[6px_12px] txt-sm leading-[14px]"
 					>
 						{t(option.key)}
 					</Link>
