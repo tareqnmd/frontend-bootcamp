@@ -33,7 +33,7 @@ export default async function RootLayout({
 					'antialiased',
 					bengaliFont.variable,
 					font.variable,
-					locale === 'en' ? 'font-english' : 'font-bengali test-leading'
+					locale === 'en' ? 'font-english' : 'font-bengali leading-normal'
 				)}
 			>
 				<AppLayout locale={locale}>{children}</AppLayout>
