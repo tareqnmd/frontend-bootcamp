@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
 	return {
-		name: 'Javascript Bootcamp',
-		short_name: 'Javascript',
-		description: 'Developed by Tareqnmd',
+		name: 'Frontend Bootcamp',
+		short_name: 'Frontend',
+		description: 'Developed & Maintained by Tareq',
 		start_url: '/',
 		display: 'standalone',
 		background_color: '#fff',

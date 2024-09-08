@@ -16,8 +16,8 @@ const bengaliFont = Noto_Sans_Bengali({
 });
 
 export const metadata: Metadata = {
-	title: 'Javascript Bootcamp',
-	description: 'Developed & maintained by Tareq',
+	title: 'Frontend Bootcamp',
+	description: 'Developed & Maintained by Tareq',
 };
 
 export default async function RootLayout({
