@@ -1,7 +1,7 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import Footer from './Footer';
-import Navbar from './Navbar';
+import Navbar from './navbar/Navbar';
 import { ThemeProvider } from './ThemeProvider';
 
 const AppLayout = async ({

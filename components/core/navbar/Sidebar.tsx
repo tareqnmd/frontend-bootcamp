@@ -1,0 +1,52 @@
+'use client';
+import { cn } from '@/lib/utils';
+import { useState } from 'react';
+import { RxHamburgerMenu } from 'react-icons/rx';
+import { TfiClose } from 'react-icons/tfi';
+import NavLink from '../NavLink';
+const Sidebar = ({
+	localeMenus,
+	menus,
+}: {
+	menus: { key: string; href: string }[];
+	localeMenus: any;
+}) => {
+	const [isOpen, setIsOpen] = useState(false);
+	return (
+		<>
+			{!isOpen ? (
+				<button
+					className="lg:hidden"
+					onClick={() => setIsOpen(true)}
+				>
+					<RxHamburgerMenu />
+				</button>
+			) : (
+				<button
+					className="lg:hidden"
+					onClick={() => setIsOpen(false)}
+				>
+					<TfiClose />
+				</button>
+			)}
+			<aside
+				className={cn(
+					'absolute bg-white w-full left-0 right-0 bottom-0',
+					isOpen ? 'top-full' : 'top-full'
+				)}
+			>
+				<div className="flex flex-col items-center justify-center gap-2 p-3">
+					{menus.map((menu) => (
+						<NavLink
+							key={menu.href}
+							href={menu.href}
+							label={localeMenus[menu.key]}
+						/>
+					))}
+				</div>
+			</aside>
+		</>
+	);
+};
+
+export default Sidebar;
