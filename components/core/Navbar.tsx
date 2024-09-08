@@ -26,7 +26,10 @@ const Navbar = async () => {
 						<LocaleSwitcher />
 						<ThemeSwitcher />
 					</div>
-					<Sidebar />
+					<Sidebar
+						localeMenus={localeMenus}
+						menus={menus}
+					/>
 				</div>
 			</div>
 		</nav>
