@@ -15,9 +15,7 @@ const bengaliFont = Noto_Sans_Bengali({
 });
 
 export const metadata: any = async () => {
-	const locale: any = await getLocale();
 	const translations = await getTranslations('Basic');
-	console.log(locale);
 	return {
 		title: translations('title'),
 		description: 'Developed & Maintained by Tareq',
