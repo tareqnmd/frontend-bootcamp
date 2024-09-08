@@ -1,14 +1,15 @@
+const initialPath = '/interview-questions/others/';
 export const questionsFromOthers = [
 	{
-		key: 'interactive_shape',
-		href: '/interview-questions/uber/interactive-shape',
+		key: 'color_memory',
+		href: initialPath + 'color-memory',
 		question_link:
-			'https://devtools.tech/questions/s/how-to-create-an-interactive-shape-based-ui-uber-frontend-interview-question-or-javascript-or-react-js---qid---6FVH1ZMWMXd4uZ8WAGEi',
-		title: 'How to create an interactive shape based UI?',
+			'https://devtools.tech/questions/s/how-to-build-color-memory-game-in-react-js-frontend-coding-challenge---qid---1wFNDiwjxcKwrHL65SN5',
+		title: 'How to build color memory game in React.js?',
 		description: `
             <h2 class="text-xl font-bold">Functional Requirement</h2>
-            <div><li>Create an empty box where array value is <code>1</code>.</li><li>User can select a box. Upon selection the box background color should change to <code>#0bcc59</code>.</li><li>Once all boxes are selected then the boxes should auto-deselect based on the order of selection.</li><li>Deselection should be non-interruptible as in once started, we can't stop it.</li><li>During de-selection, user should not be able to select a new box as in disable any box interaction.</li></div>
+            <div><ol><li><p><strong>Total Number of Boxes:</strong></p><ul><li>The main Game component should accept a total number of boxes.</li><li>The Game board should always have 4 columns and rows should be adjusted based on that.</li><li>The total number of boxes must always be divisible by 4 (column length).</li></ul></li><li><p><strong>Color Assignment:</strong></p><ul><li>The total number of unique colors should be exactly half the number of boxes.</li><li>Each color should be assigned to two boxes, forming pairs.</li></ul></li><li><p><strong>Initial State:</strong></p><ul><li>All boxes should initially have a white background color.</li></ul></li><li><p><strong>Revealing Colors:</strong></p><ul><li>When a user clicks on a box, the box's assigned color should be revealed.</li><li>If the user clicks on a second box and the colors do not match, both boxes should reset to a white background after 400 ms.</li><li>If the colors match, the pair should remain revealed for the rest of the game.</li></ul></li><li><p><strong>Round Tracking:</strong></p><ul><li>Every pair selection (whether successful or unsuccessful) should count as one round.</li><li>At the end of the game, the user should be informed of the total number of rounds taken to complete the game.</li></ul></li><li><p><strong>Reset Functionality:</strong></p><ul><li>The game should include a reset button.</li><li>The reset button should be enabled only at the end of the game, allowing the user to reset and restart the game.</li></ul></li></ol></div>
         `,
-		tags: ['uber', 'beginner', 'javascript', 'react'],
+		tags: ['others', 'beginner', 'javascript', 'react'],
 	},
 ];
