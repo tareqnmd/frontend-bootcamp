@@ -31,9 +31,8 @@ export default async function RootLayout({
 			<body
 				className={cn(
 					'antialiased',
-					bengaliFont.variable,
-					font.variable,
-					locale === 'en' ? 'font-english' : 'font-bengali leading-normal'
+					locale === 'en' ? font.variable : bengaliFont.variable,
+					locale === 'en' ? 'font-english' : 'font-bengali'
 				)}
 			>
 				<AppLayout locale={locale}>{children}</AppLayout>
