@@ -1,4 +1,4 @@
-import { frontendQuestionOptions } from '@/lib/menu';
+import { interviewQuestions } from '@/lib/interview-questions';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 
@@ -6,7 +6,7 @@ const FrontendQuestions = async () => {
 	const t = await getTranslations('InterviewQuestions');
 	return (
 		<ul className="h-full place-content-center flex flex-wrap items-center gap-2">
-			{frontendQuestionOptions.map((option) => (
+			{interviewQuestions.map((option) => (
 				<li
 					key={option.key}
 					className="border border-black dark:border-white flex"

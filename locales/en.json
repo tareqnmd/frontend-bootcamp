@@ -15,8 +15,10 @@
 		"title": "Interview Questions",
 		"uber": "Uber",
 		"others": "Others",
+		"atlassian": "Atlassian",
 		"uber_title": "Interview Questions Uber",
-		"others_title": "Interview Questions Others"
+		"others_title": "Interview Questions Others",
+		"atlassian_title": "Interview Questions Atlassian"
 	},
 	"Footer": {
 		"copyright": "© 2024 Js Bootcamp by Tareq. All rights reserved."

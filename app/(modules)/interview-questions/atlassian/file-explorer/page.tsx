@@ -1,11 +1,11 @@
+import FileExplorer from '@/components/modules/interview-questions/atlassian/FileExplorer';
 import FrontendQuestionWrapper from '@/components/modules/interview-questions/FrontendQuestionWrapper';
-import ColorMemory from '@/components/modules/interview-questions/others/ColorMemory';
 import { getInterviewQuestion } from '@/lib/interview-questions';
 const page = () => {
-	const question = getInterviewQuestion('others', 'color_memory');
+	const question = getInterviewQuestion('atlassian', 'file_explorer');
 	return question ? (
 		<FrontendQuestionWrapper question={question}>
-			<ColorMemory />
+			<FileExplorer />
 		</FrontendQuestionWrapper>
 	) : null;
 };

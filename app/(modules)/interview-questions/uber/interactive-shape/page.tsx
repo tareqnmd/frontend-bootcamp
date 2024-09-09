@@ -1,10 +1,8 @@
 import FrontendQuestionWrapper from '@/components/modules/interview-questions/FrontendQuestionWrapper';
 import InteractiveShape from '@/components/modules/interview-questions/uber/interactive-shape/InteractiveShape';
-import { questionsFromUber } from '@/lib/interview-questions/uber';
+import { getInterviewQuestion } from '@/lib/interview-questions';
 const page = () => {
-	const question = questionsFromUber.find(
-		(question) => question.key === 'interactive_shape'
-	);
+	const question = getInterviewQuestion('uber', 'interactive_shape');
 	return question ? (
 		<FrontendQuestionWrapper question={question}>
 			<InteractiveShape />

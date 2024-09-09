@@ -38,3 +38,10 @@ main.main {
 .theme {
 	@apply bg-light dark:bg-dark text-dark dark:text-light;
 }
+
+.question-description {
+	li {
+		margin-left: 1.5rem;
+		@apply list-disc;
+	}
+}

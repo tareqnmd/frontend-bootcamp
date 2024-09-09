@@ -18,14 +18,3 @@ export const menus = [
 		href: '/problem-solving',
 	},
 ];
-
-export const frontendQuestionOptions = [
-	{
-		key: 'uber',
-		href: '/interview-questions/uber',
-	},
-	{
-		key: 'others',
-		href: '/interview-questions/others',
-	},
-];

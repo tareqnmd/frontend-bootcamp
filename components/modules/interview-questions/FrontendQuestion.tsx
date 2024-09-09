@@ -8,14 +8,17 @@ const FrontendQuestion = async ({ question }: { question: any }) => {
 	return (
 		<div className="flex flex-col gap-2 mb-4">
 			<Link
-				className="text-blue-700 border-b border-blue-700 w-max"
+				className="hidden text-blue-700 border-b border-blue-700 w-max"
 				href={question_link}
 				target="_blank"
 			>
 				{t('external_question')}
 			</Link>
 			<strong className="text-2xl">{title}</strong>
-			<div dangerouslySetInnerHTML={htmlParse(question.description)} />
+			<div
+				className="question-description"
+				dangerouslySetInnerHTML={htmlParse(question.description)}
+			/>
 			<div>
 				{tags?.map((tag: string) => (
 					<span
