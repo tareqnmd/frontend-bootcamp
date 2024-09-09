@@ -2,9 +2,9 @@ import AppLayout from '@/components/core/AppLayout';
 import { cn } from '@/lib/utils';
 import '@/styles/global.scss';
 import { getLocale, getTranslations } from 'next-intl/server';
-import { Lora, Noto_Serif_Bengali } from 'next/font/google';
+import { Noto_Serif_Bengali, Open_Sans } from 'next/font/google';
 
-const font = Lora({
+const font = Open_Sans({
 	subsets: ['latin'],
 	variable: '--font-english',
 });
