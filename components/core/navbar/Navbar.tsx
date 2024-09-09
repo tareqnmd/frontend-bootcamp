@@ -9,7 +9,7 @@ const Navbar = async () => {
 	const t = await getTranslations('Navbar');
 	const localeMenus = t.raw('menus');
 	return (
-		<nav className="border-b relative">
+		<nav className="border-b bg-white dark:bg-black sticky top-0 z-50">
 			<div className="container py-[10px] xl:py-[20px] flex items-center justify-between gap-4 font-[400]">
 				<AppLogo />
 				<div className="lg:ml-auto links hidden lg:flex items-center gap-4">

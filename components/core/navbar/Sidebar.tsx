@@ -31,8 +31,8 @@ const Sidebar = ({
 			)}
 			<aside
 				className={cn(
-					'absolute transition-all duration-300  bg-white dark:bg-black top-full left-0 right-0 border-t overflow-hidden',
-					isOpen ? 'h-screen' : 'h-0'
+					'lg:hidden fixed transition-all duration-300  bg-white dark:bg-black left-0 right-0 border-t overflow-hidden top-[60px]',
+					isOpen ? ' bottom-0' : 'bottom-full'
 				)}
 			>
 				<div className="flex flex-col items-center justify-center gap-2 p-3">
