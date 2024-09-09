@@ -17,7 +17,7 @@ const FrontendQuestionsList = ({
 				{menus.map((menu, index) => (
 					<li
 						key={menu.key}
-						className="flex  gap-1"
+						className="flex items-center gap-1"
 					>
 						<span>{index + 1}.</span>
 						<Link

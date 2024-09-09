@@ -2,14 +2,14 @@ import AppLayout from '@/components/core/AppLayout';
 import { cn } from '@/lib/utils';
 import '@/styles/global.scss';
 import { getLocale, getTranslations } from 'next-intl/server';
-import { Lora, Noto_Sans_Bengali } from 'next/font/google';
+import { Lora, Noto_Serif_Bengali } from 'next/font/google';
 
 const font = Lora({
 	subsets: ['latin'],
 	variable: '--font-english',
 });
 
-const bengaliFont = Noto_Sans_Bengali({
+const bengaliFont = Noto_Serif_Bengali({
 	subsets: ['bengali'],
 	variable: '--font-bengali',
 });
