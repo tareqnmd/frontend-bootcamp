@@ -14,6 +14,10 @@ export const menus = [
 		href: '/interview-questions',
 	},
 	{
+		key: 'challenges',
+		href: '/challenges',
+	},
+	{
 		key: 'problem_solving',
 		href: '/problem-solving',
 	},
