@@ -1,6 +1,7 @@
 'use client';
+import useOutsideClick from '@/hooks/useOutsideClick';
 import { cn } from '@/lib/utils';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { TfiClose } from 'react-icons/tfi';
 import NavLink from '../NavLink';
@@ -12,6 +13,8 @@ const Sidebar = ({
 	localeMenus: any;
 }) => {
 	const [isOpen, setIsOpen] = useState(false);
+	const asideRef: any = useRef();
+	useOutsideClick(asideRef, () => setIsOpen(false), true);
 	return (
 		<>
 			{!isOpen ? (
@@ -30,6 +33,7 @@ const Sidebar = ({
 				</button>
 			)}
 			<aside
+				ref={asideRef}
 				className={cn(
 					'lg:hidden border-l theme fixed transition-all duration-300 w-[220px] overflow-hidden top-[61px] bottom-0',
 					isOpen ? 'right-0' : '-right-[220px]'
