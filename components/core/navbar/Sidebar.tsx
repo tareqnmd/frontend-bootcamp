@@ -30,7 +30,10 @@ const Sidebar = ({
 				</button>
 			)}
 			<aside
-				className={cn('absolute transition-all duration-300', isOpen ? '' : '')}
+				className={cn(
+					'absolute transition-all duration-300  bg-white top-full w-full border-t overflow-hidden',
+					isOpen ? 'h-screen' : 'h-0'
+				)}
 			>
 				<div className="flex flex-col items-center justify-center gap-2 p-3">
 					{menus.map((menu) => (
