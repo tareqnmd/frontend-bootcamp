@@ -31,13 +31,14 @@ const Sidebar = ({
 			)}
 			<aside
 				className={cn(
-					'lg:hidden fixed transition-all duration-300  bg-white dark:bg-black left-0 right-0 border-t overflow-hidden top-[60px]',
+					'lg:hidden fixed transition-all duration-300 ease-in-out bg-white dark:bg-black left-0 right-0 border-y overflow-hidden top-[60px]',
 					isOpen ? ' bottom-0' : 'bottom-full'
 				)}
 			>
 				<div className="flex flex-col items-center justify-center gap-2 p-3">
 					{menus.map((menu) => (
 						<NavLink
+							onClick={() => setIsOpen(false)}
 							key={menu.href}
 							href={menu.href}
 							label={localeMenus[menu.key]}
