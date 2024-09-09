@@ -31,7 +31,7 @@ const Sidebar = ({
 			)}
 			<aside
 				className={cn(
-					'lg:hidden fixed transition-all duration-100 bg-white dark:bg-black left-0 right-0 overflow-hidden top-[61px]',
+					'lg:hidden fixed transition-all duration-100 left-0 right-0 overflow-hidden top-[61px]',
 					isOpen ? 'bottom-0' : 'bottom-full'
 				)}
 			>

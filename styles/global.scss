@@ -28,11 +28,13 @@ body {
 }
 
 main.main {
-	display: grid;
-	min-height: 100dvh;
-	grid-template-rows: auto 1fr auto;
+	@apply theme grid min-h-dvh grid-rows-[auto_1fr_auto];
 }
 
 .word-break-word {
 	word-break: break-word;
+}
+
+.theme {
+	@apply bg-light dark:bg-dark text-dark dark:text-light;
 }

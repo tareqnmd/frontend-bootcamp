@@ -9,7 +9,7 @@ const FrontendQuestions = async () => {
 			{frontendQuestionOptions.map((option) => (
 				<li
 					key={option.key}
-					className="border text-black dark:text-white border-black dark:border-white flex"
+					className="border border-black dark:border-white flex"
 				>
 					<Link
 						key={option.href}
