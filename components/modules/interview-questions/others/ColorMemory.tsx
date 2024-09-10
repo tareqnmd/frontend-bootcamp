@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 
 const boxes = [
 	[1, 1, 1, 1],
-	// [1, 1, 1, 1],
-	// [1, 1, 1, 1],
-	// [1, 1, 1, 1],
+	[1, 1, 1, 1],
+	[1, 1, 1, 1],
+	[1, 1, 1, 1],
 ];
 const flatBoxData = boxes.flat();
 
