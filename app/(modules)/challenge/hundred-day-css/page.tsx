@@ -1,13 +1,8 @@
-import FrontendQuestionWrapper from '@/components/modules/interview-questions/FrontendQuestionWrapper';
-import { getChallenge } from '@/lib/module/challenge';
-import WordCarousel from '@/lib/module/challenge/hundred-day-css/WordCarousel';
-const page = () => {
-	const question = getChallenge('hundred_day_css', '73_word_carousel');
-	return question ? (
-		<FrontendQuestionWrapper question={question}>
-			<WordCarousel />
-		</FrontendQuestionWrapper>
-	) : null;
+import FrontendQuestionsList from '@/components/modules/interview-questions/FrontendQuestionsList';
+import { HundredDayCSSChallenge } from '@/lib/module/challenge/100-day-css';
+
+const page = async () => {
+	return <FrontendQuestionsList menus={HundredDayCSSChallenge} />;
 };
 
 export default page;
