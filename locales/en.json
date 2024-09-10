@@ -11,15 +11,6 @@
 			"challenge": "Challenge"
 		}
 	},
-	"InterviewQuestions": {
-		"title": "Interview Questions",
-		"uber": "Uber",
-		"others": "Others",
-		"atlassian": "Atlassian",
-		"uber_title": "Uber Interview Questions",
-		"atlassian_title": "Atlassian Interview Questions",
-		"others_title": "Others Interview Questions"
-	},
 	"Footer": {
 		"copyright": "© 2024 Js Bootcamp by Tareq. All rights reserved."
 	},

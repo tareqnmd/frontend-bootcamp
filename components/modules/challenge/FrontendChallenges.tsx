@@ -1,10 +1,10 @@
-import { interviewQuestions } from '@/lib/module/interview-questions';
+import { challenges } from '@/lib/module/challenge';
 import Link from 'next/link';
 
-const FrontendQuestions = async () => {
+const FrontendChallenges = () => {
 	return (
 		<ul className="h-full place-content-center flex flex-wrap items-center gap-2">
-			{interviewQuestions.map((option) => (
+			{challenges.map((option) => (
 				<li
 					key={option.key}
 					className="border border-black dark:border-white flex"
@@ -22,4 +22,4 @@ const FrontendQuestions = async () => {
 	);
 };
 
-export default FrontendQuestions;
+export default FrontendChallenges;

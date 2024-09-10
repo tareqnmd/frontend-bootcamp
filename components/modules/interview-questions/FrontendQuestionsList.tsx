@@ -3,16 +3,11 @@ import Link from 'next/link';
 
 const FrontendQuestionsList = ({
 	menus,
-	title,
 }: {
 	menus: InterviewQuestionType[];
-	title: string;
 }) => {
 	return (
 		<div className="grid gap-2">
-			<strong className="text-xl border-b border-black dark:border-white">
-				{title}
-			</strong>
 			<ul className="grid gap-4">
 				{menus.map((menu, index) => (
 					<li

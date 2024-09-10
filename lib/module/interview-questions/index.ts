@@ -5,16 +5,19 @@ import { questionsFromUber } from './uber';
 export const interviewQuestions = [
 	{
 		key: 'uber',
+		label: 'Uber',
 		href: '/interview-questions/uber',
 		questions: questionsFromUber,
 	},
 	{
 		key: 'atlassian',
+		label: 'Atlassian',
 		href: '/interview-questions/atlassian',
 		questions: questionsFromAtlassian,
 	},
 	{
 		key: 'others',
+		label: 'Others',
 		href: '/interview-questions/others',
 		questions: questionsFromOthers,
 	},

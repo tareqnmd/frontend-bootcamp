@@ -1,5 +1,7 @@
+import FrontendChallenges from '@/components/modules/challenge/FrontendChallenges';
+
 const page = () => {
-	return <></>;
+	return <FrontendChallenges />;
 };
 
 export default page;

@@ -1,11 +1,11 @@
-import FileExplorer from '@/components/modules/interview-questions/atlassian/FileExplorer';
 import FrontendQuestionWrapper from '@/components/modules/interview-questions/FrontendQuestionWrapper';
-import { getInterviewQuestion } from '@/lib/module/interview-questions';
+import { getChallenge } from '@/lib/module/challenge';
+import WordCarousel from '@/lib/module/challenge/hundred-day-css/WordCarousel';
 const page = () => {
-	const question = getInterviewQuestion('atlassian', 'file_explorer');
+	const question = getChallenge('hundred_day_css', '73_word_carousel');
 	return question ? (
 		<FrontendQuestionWrapper question={question}>
-			<FileExplorer />
+			<WordCarousel />
 		</FrontendQuestionWrapper>
 	) : null;
 };

@@ -1,15 +1,8 @@
 import FrontendQuestionsList from '@/components/modules/interview-questions/FrontendQuestionsList';
-import { questionsFromAtlassian } from '@/lib/interview-questions/atlassian';
-import { getTranslations } from 'next-intl/server';
+import { questionsFromAtlassian } from '@/lib/module/interview-questions/atlassian';
 
 const page = async () => {
-	const t = await getTranslations('InterviewQuestions');
-	return (
-		<FrontendQuestionsList
-			menus={questionsFromAtlassian}
-			title={t('atlassian_title')}
-		/>
-	);
+	return <FrontendQuestionsList menus={questionsFromAtlassian} />;
 };
 
 export default page;
