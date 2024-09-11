@@ -26,7 +26,15 @@ const JSTopic = ({ menu, index, parentIndex }: any) => {
 					className="cursor-pointer font-semibold flex items-center justify-between gap-1"
 				>
 					{parentIndexString} {menu.label}
-					{menu.childMenu ? !isOpen ? <GoPlus /> : <HiOutlineMinus /> : ''}
+					{menu.childMenu ? (
+						!isOpen ? (
+							<GoPlus className="text-lg shrink-0" />
+						) : (
+							<HiOutlineMinus className="text-lg shrink-0" />
+						)
+					) : (
+						''
+					)}
 				</div>
 			)}
 			{menu.childMenu && isOpen ? (
