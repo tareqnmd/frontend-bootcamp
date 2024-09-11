@@ -1,9 +1,9 @@
-import JavascriptMenus from '@/components/modules/javascript/JavascriptMenus';
+import JSSidebar from '@/components/modules/javascript/JSSidebar';
 
 const layout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<div className="grid grid-cols[auto_1fr] h-full">
-			<JavascriptMenus />
+			<JSSidebar />
 			{children}
 		</div>
 	);

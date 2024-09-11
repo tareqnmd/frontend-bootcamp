@@ -7,9 +7,104 @@ export type javascriptMenusType = {
 
 export const javascriptMenu = [
 	{
+		key: 'js_fundamentals',
+		label: 'JS Fundamentals',
+		childMenu: [
+			{
+				key: 'js_fundamentals_introduction',
+				label: 'JS Fundamentals Introduction',
+				href: '/javascript/js-fundamentals/introduction',
+			},
+		],
+	},
+	{
+		key: 'dom',
+		label: 'DOM',
+		childMenu: [
+			{
+				key: 'dom_introduction',
+				label: 'DOM Introduction',
+				href: '/javascript/dom/introduction',
+			},
+		],
+	},
+	{
+		key: 'client_storage',
+		label: 'Client Storage',
+		childMenu: [
+			{
+				key: 'client_storage_introduction',
+				label: 'Client Storage Introduction',
+				href: '/javascript/client-storage/introduction',
+			},
+			{
+				key: 'cookies',
+				label: 'Cookies',
+				href: '/javascript/client-storage/cookies',
+			},
+			{
+				key: 'local_storage',
+				label: 'Local Storage',
+				href: '/javascript/client-storage/local-storage',
+			},
+			{
+				key: 'session_storage',
+				label: 'Session Storage',
+				href: '/javascript/client-storage/session-storage',
+			},
+			{
+				key: 'index_db',
+				label: 'Index DB',
+				href: '/javascript/client-storage/index-db',
+			},
+		],
+	},
+	{
+		key: 'asynchronous_javascript',
+		label: 'Asynchronous Javascript',
+		childMenu: [
+			{
+				key: 'asynchronous_javascript_introduction',
+				label: 'Asynchronous Javascript Introduction',
+				href: '/javascript/asynchronous-javascript/introduction',
+			},
+			{
+				key: 'handle_asynchronous_javascript',
+				label: 'Handle Asynchronous Javascript',
+				href: '/javascript/asynchronous-javascript/handle-asynchronous-javascript',
+			},
+			{
+				key: 'ajax',
+				label: 'Ajax',
+				href: '/javascript/asynchronous-javascript/ajax',
+			},
+			{
+				key: 'event_loop',
+				label: 'Event Loop',
+				href: '/javascript/asynchronous-javascript/event-loop',
+			},
+		],
+	},
+	{
+		key: 'error_handling',
+		label: 'Error Handling',
+		childMenu: [
+			{
+				key: 'error_handling_introduction',
+				label: 'Error Handling Introduction',
+				href: '/javascript/error-handling/introduction',
+			},
+		],
+	},
+	{
 		key: 'es6_10',
 		label: 'ES6-10',
 		childMenu: [
+			{
+				key: 'es6_10_introduction',
+				label: 'ES6-10 Introduction',
+				href: '/javascript/es6-10/introduction',
+			},
 			{
 				key: 'let_const',
 				label: 'Let & Const',
