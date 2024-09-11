@@ -1,10 +1,23 @@
-const JavascriptMenu = () => {
+import { javascriptMenusType } from '@/lib/module/javascript/menu';
+import Link from 'next/link';
+
+const JavascriptMenu = ({ menus = [] }: { menus: javascriptMenusType }) => {
 	return (
-		<div className="border-r border-dark dark:border-light w-[200px] h-full">
-			<ul>
-				<li>ES6</li>
-			</ul>
-		</div>
+		<ul className="flex flex-col gap-1">
+			{menus.map((menu: any) => (
+				<li
+					className="ml-2"
+					key={menu.key}
+				>
+					{menu.href ? (
+						<Link href={menu.href}>{menu.label}</Link>
+					) : (
+						<span className="font-bold">{menu.label}</span>
+					)}
+					{menu.childMenu ? <JavascriptMenu menus={menu.childMenu} /> : null}
+				</li>
+			))}
+		</ul>
 	);
 };
 
