@@ -3,8 +3,11 @@ import JavascriptMenu from './JavascriptMenu';
 
 const JavascriptMenus = () => {
 	return (
-		<div className="border-r dark:border-[#444]dark:border-light w-[220px] h-full">
-			<JavascriptMenu menus={javascriptMenu} />
+		<div className="border-r dark:border-[#444]dark:border-light w-[220px] h-full pr-4">
+			<JavascriptMenu
+				menus={javascriptMenu}
+				parentIndex={1}
+			/>
 		</div>
 	);
 };
