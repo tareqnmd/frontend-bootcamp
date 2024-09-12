@@ -16,8 +16,8 @@ const NavLink = ({
 	return (
 		<Link
 			className={cn(
-				'hover:underline',
-				pathname.startsWith(href) && 'underline'
+				'hover:font-semibold',
+				pathname.startsWith(href) && 'font-semibold'
 			)}
 			href={href}
 			onClick={onClick}
