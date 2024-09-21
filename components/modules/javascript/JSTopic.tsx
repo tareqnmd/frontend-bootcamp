@@ -29,7 +29,7 @@ const JSTopic = ({ menu, index, parentIndex }: any) => {
 			{menu.href ? (
 				<Link
 					className={cn(
-						'text-sm font-medium hover:text-blue-500',
+						'text-xs font-medium hover:text-blue-500',
 						pathname === menu.href ? 'text-blue-500' : ''
 					)}
 					href={menu.href}
@@ -39,14 +39,14 @@ const JSTopic = ({ menu, index, parentIndex }: any) => {
 			) : (
 				<div
 					onClick={() => setIsOpen((prev) => !prev)}
-					className="cursor-pointer font-semibold flex items-center justify-between gap-1"
+					className="cursor-pointer font-semibold flex items-center justify-between text-sm gap-1"
 				>
 					{parentIndexString} {menu.label}
 					{menu.childMenu ? (
 						!isOpen ? (
-							<GoPlus className="text-lg shrink-0" />
+							<GoPlus className="text-sm shrink-0" />
 						) : (
-							<HiOutlineMinus className="text-lg shrink-0" />
+							<HiOutlineMinus className="text-sm shrink-0" />
 						)
 					) : (
 						''
