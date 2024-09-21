@@ -1,5 +1,7 @@
+import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import { GoPlus } from 'react-icons/go';
 import { HiOutlineMinus } from 'react-icons/hi';
 import JSTopics from './JSTopics';
@@ -7,6 +9,17 @@ const JSTopic = ({ menu, index, parentIndex }: any) => {
 	const parentIndexString =
 		(parentIndex ? parentIndex : '') + (index + 1) + '.';
 	const [isOpen, setIsOpen] = useState(false);
+	const pathname = usePathname();
+
+	useEffect(() => {
+		if (
+			menu?.childMenu?.find(
+				(childMenu: { href: string }) => childMenu?.href === pathname
+			)
+		) {
+			setIsOpen(true);
+		}
+	}, [menu, pathname]);
 
 	return (
 		<li
@@ -15,7 +28,10 @@ const JSTopic = ({ menu, index, parentIndex }: any) => {
 		>
 			{menu.href ? (
 				<Link
-					className="text-sm font-medium hover:text-blue-500"
+					className={cn(
+						'text-sm font-medium hover:text-blue-500',
+						pathname === menu.href ? 'text-blue-500' : ''
+					)}
 					href={menu.href}
 				>
 					{parentIndexString} {menu.label}
