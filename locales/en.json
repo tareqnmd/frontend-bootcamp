@@ -2,11 +2,11 @@
 	"Basic": {
 		"title": "Frontend Bootcamp",
 		"question": "Question",
+		"javascript": "Javascript",
 		"external_question": "External Question"
 	},
 	"Navbar": {
 		"menus": {
-			"javascript": "Javascript",
 			"interview_questions": "Interview Questions",
 			"challenge": "Challenge"
 		}
@@ -15,7 +15,6 @@
 		"copyright": "© 2024 Js Bootcamp by Tareq. All rights reserved."
 	},
 	"HomePage": {
-		"title": "Frontend Bootcamp",
-		"javascript": "Javascript"
+		"title": "Frontend Bootcamp"
 	}
 }
