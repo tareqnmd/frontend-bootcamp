@@ -7,7 +7,7 @@ const FrontendQuestion = async ({ question }: { question: any }) => {
 	const t = await getTranslations('Basic');
 	const { title, question_link, tags } = question;
 	return (
-		<div className="flex flex-col gap-2 sm:gap-4 my-4">
+		<div className="flex flex-col gap-2 sm:gap-4 mb-4">
 			<Link
 				className="hidden w-max"
 				href={question_link}
