@@ -53,7 +53,11 @@ const FileExplorer = () => {
 								key={index}
 							>
 								<div className="flex items-center gap-1">
-									{item.type === 'file' ? <FaFile /> : <AiFillFolder />}
+									{item.type === 'file' ? (
+										<FaFile />
+									) : (
+										<AiFillFolder className="cursor-pointer" />
+									)}
 									{item.edit ? (
 										<input
 											className="h-[16px] rounded-sm"
@@ -65,14 +69,14 @@ const FileExplorer = () => {
 									{/* {item.children.length > 0 ? null : null} */}
 								</div>
 								<div className="actions flex items-center gap-1">
-									<MdModeEditOutline />
+									<MdModeEditOutline className="cursor-pointer" />
 									{item.type === 'folder' ? (
 										<>
-											<AiFillFolder />
-											<FaFile />
+											<AiFillFolder className="cursor-pointer" />
+											<FaFile className="cursor-pointer" />
 										</>
 									) : null}
-									<AiFillDelete />
+									<AiFillDelete className="cursor-pointer" />
 								</div>
 							</div>
 						))}
