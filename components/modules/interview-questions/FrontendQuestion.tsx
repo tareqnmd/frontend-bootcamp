@@ -7,7 +7,7 @@ const FrontendQuestion = async ({ question }: { question: any }) => {
 	const t = await getTranslations('Basic');
 	const { title, question_link, tags } = question;
 	return (
-		<div className="flex flex-col gap-2 sm:gap-4 mb-4">
+		<div className="flex flex-col gap-2 sm:gap-4 my-4">
 			<Link
 				className="hidden w-max"
 				href={question_link}
@@ -15,7 +15,7 @@ const FrontendQuestion = async ({ question }: { question: any }) => {
 			>
 				{t('external_question')}
 			</Link>
-			<strong className="text-xl sm:text-2xl mt-2">{title}</strong>
+			<strong className="text-xl sm:text-2xl">{title}</strong>
 			<div
 				className="question-description"
 				dangerouslySetInnerHTML={htmlParse(question.description)}

@@ -7,8 +7,8 @@ const BreadCrumbs = () => {
 	const pathName = usePathname();
 	const pathArray = pathName.split('/').filter((x) => x);
 
-	return (
-		<nav className="text-xs sm:text-sm bg-secondary dark:bg-[#282c33] text-dark dark:text-light w-max mb-1 py-2 px-2 sm:px-4 rounded transition-all">
+	return pathArray.length > 1 ? (
+		<nav className="text-xs sm:text-sm bg-secondary dark:bg-[#282c33] text-dark dark:text-light mb-1 py-2 px-2 sm:px-4 rounded transition-all">
 			<ol className="flex items-center gap-1">
 				{pathArray.map((path, index) => {
 					const href = '/' + pathArray.slice(0, index + 1).join('/');
@@ -33,7 +33,7 @@ const BreadCrumbs = () => {
 				})}
 			</ol>
 		</nav>
-	);
+	) : null;
 };
 
 export default BreadCrumbs;
