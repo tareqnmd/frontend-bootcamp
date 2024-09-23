@@ -41,7 +41,7 @@ main.main {
 
 .question-description {
 	li {
+		@apply list-disc text-sm sm:text-base;
 		margin-left: 1.5rem;
-		@apply list-disc;
 	}
 }
